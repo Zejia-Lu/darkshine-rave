@@ -1,0 +1,13 @@
+/.cvsignore/1.2/Thu Oct 23 21:29:51 2003//TCLHEP_2_0_4_4
+/ChangeLog/1.1.4.17.2.8/Fri Nov 13 17:32:45 2009//TCLHEP_2_0_4_4
+/INSTALL/1.1.1.1.4.5/Mon Jun 12 20:18:29 2006//TCLHEP_2_0_4_4
+/Makefile.am/1.6.4.2/Fri Apr  8 17:49:40 2005//TCLHEP_2_0_4_4
+/Vector-config.in/1.1.1.1.4.3.2.1/Wed Nov 19 19:10:00 2008//TCLHEP_2_0_4_4
+/Vector-deps.in/1.1.4.1/Thu Apr 29 00:20:37 2004//TCLHEP_2_0_4_4
+/bootstrap/1.1.1.1.4.1/Fri Sep 24 22:43:55 2004//TCLHEP_2_0_4_4
+/configure.in/1.15.2.30.2.12/Fri Nov 13 17:32:45 2009//TCLHEP_2_0_4_4
+D/Vector////
+D/autotools////
+D/doc////
+D/src////
+D/test////
