@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/boost/!svn/ver/57747/tags/release/Boost_1_41_0/boost/spirit/home/karma/stream/detail
+END
+format_manip.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/boost/!svn/ver/57747/tags/release/Boost_1_41_0/boost/spirit/home/karma/stream/detail/format_manip.hpp
+END
+iterator_sink.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/boost/!svn/ver/57747/tags/release/Boost_1_41_0/boost/spirit/home/karma/stream/detail/iterator_sink.hpp
+END

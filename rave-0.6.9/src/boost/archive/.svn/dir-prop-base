@@ -1,0 +1,8 @@
+K 13
+svn:mergeinfo
+V 277
+/branches/RC_1_34_0/boost/boost/archive:33417-38285
+/branches/release/boost/archive:40341-57136
+/tags/Version_1_34_1/boost/boost/archive:38286-40340
+/trunk/boost/archive:47093,49510,49601,49627-49628,51104,51284,52866,55159,56942,57126,57139,57150-57153,57290,57346-57348,57395
+END

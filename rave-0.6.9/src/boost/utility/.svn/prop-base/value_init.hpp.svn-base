@@ -1,0 +1,19 @@
+K 13
+svn:eol-style
+V 6
+native
+K 12
+svn:keywords
+V 23
+Author Date Id Revision
+K 13
+svn:mergeinfo
+V 359
+/devel/boost/utility/value_init.hpp:38327-38328
+/trunk/boost/boost/utility/value_init.hpp:33417-38326
+/trunk/boost/utility/value_init.hpp:38329-56544,56557-56563,56570-56571,56603,56633,56651,56654,56658,56682,56697-56699,56715,56717-56719,56732,56796,56855-56856,56859-56860,56868,56942,56988-56989,57005-57006,57126,57139,57150-57153,57290,57346-57348,57395
+K 13
+svn:mime-type
+V 10
+text/plain
+END

@@ -1,0 +1,19 @@
+K 13
+svn:eol-style
+V 6
+native
+K 12
+svn:keywords
+V 23
+Author Date Id Revision
+K 13
+svn:mergeinfo
+V 137
+/devel/boost/thread.hpp:38327-38328
+/trunk/boost/boost/thread.hpp:33417-38326
+/trunk/boost/thread.hpp:38329-57242,57290,57346-57348,57395
+K 13
+svn:mime-type
+V 10
+text/plain
+END

@@ -1,0 +1,10 @@
+K 13
+svn:mergeinfo
+V 389
+/devel/boost/math:38327-38328
+/sandbox/math_toolkit/boost/math:51455-56651
+/sandbox-branches/bhy/py3k/boost/math:52115-56304
+/sandbox-branches/intrusive_fix_SunCC/boost/math:55764-55783
+/trunk/boost/boost/math:33417-38326
+/trunk/boost/math:38329-56712,56715,56717-56719,56732,56796,56855-56856,56859-56860,56868,56942,56988-56989,57005-57006,57126,57139,57150-57153,57290,57346-57348,57395
+END

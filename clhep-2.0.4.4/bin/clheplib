@@ -1,0 +1,69 @@
+#! /bin/sh
+# 
+# 
+ 
+usage() 
+{ 
+    echo "Usage: clhepib [package]" 
+    exit 1 
+} 
+ 
+if test $# -eq 0; then 
+    pkg=all 
+else 
+    pkg=$1 
+fi 
+ 
+libdir="/afs/cern.ch/sw/lcg/external/clhep/2.0.4.4/x86_64-slc5-gcc43-opt/lib" 
+if test -n "$CLHEP_DIR"; then 
+    libdir="$CLHEP_DIR/lib" 
+fi 
+ 
+case $pkg in 
+all) 
+  if test -f $libdir/libCLHEP-2.0.4.4.a || test -f $libdir/libCLHEP-2.0.4.4.so 
+  then   
+    echo -L$libdir -lCLHEP-2.0.4.4 
+  else 
+    echo -L$libdir   -lCLHEP-Evaluator-2.0.4.4 -lCLHEP-Exceptions-2.0.4.4 -lCLHEP-GenericFunctions-2.0.4.4 -lCLHEP-Geometry-2.0.4.4 -lCLHEP-RandomObjects-2.0.4.4 -lCLHEP-RefCount-2.0.4.4 -lCLHEP-Matrix-2.0.4.4 -lCLHEP-Cast-2.0.4.4 -lCLHEP-Vector-2.0.4.4 -lCLHEP-Random-2.0.4.4 -lCLHEP-Units-2.0.4.4
+  fi 
+  ;; 
+Units) 
+  echo -L$libdir   -lCLHEP-Units-2.0.4.4
+  ;; 
+Vector) 
+  echo -L$libdir   -lCLHEP-Vector-2.0.4.4 -lCLHEP-Units-2.0.4.4
+  ;; 
+Evaluator) 
+  echo -L$libdir   -lCLHEP-Evaluator-2.0.4.4
+  ;; 
+GenericFunctions) 
+  echo -L$libdir   -lCLHEP-GenericFunctions-2.0.4.4
+  ;; 
+Geometry) 
+  echo -L$libdir   -lCLHEP-Geometry-2.0.4.4 -lCLHEP-Vector-2.0.4.4 -lCLHEP-Units-2.0.4.4
+  ;; 
+Random) 
+  echo -L$libdir   -lCLHEP-Random-2.0.4.4 -lCLHEP-Units-2.0.4.4
+  ;; 
+Matrix) 
+  echo -L$libdir   -lCLHEP-Matrix-2.0.4.4 -lCLHEP-Vector-2.0.4.4 -lCLHEP-Random-2.0.4.4 -lCLHEP-Units-2.0.4.4
+  ;; 
+RandomObjects) 
+  echo -L$libdir   -lCLHEP-RandomObjects-2.0.4.4 -lCLHEP-Matrix-2.0.4.4 -lCLHEP-Vector-2.0.4.4 -lCLHEP-Random-2.0.4.4 -lCLHEP-Units-2.0.4.4
+  ;; 
+Cast) 
+  echo -L$libdir   -lCLHEP-Cast-2.0.4.4
+  ;; 
+RefCount) 
+  echo -L$libdir   -lCLHEP-RefCount-2.0.4.4 -lCLHEP-Cast-2.0.4.4
+  ;; 
+Exceptions) 
+  echo -L$libdir   -lCLHEP-Exceptions-2.0.4.4 -lCLHEP-RefCount-2.0.4.4 -lCLHEP-Cast-2.0.4.4
+  ;; 
+*) 
+  echo unknown package $pkg 
+  ;; 
+esac 
+ 
+exit 0 

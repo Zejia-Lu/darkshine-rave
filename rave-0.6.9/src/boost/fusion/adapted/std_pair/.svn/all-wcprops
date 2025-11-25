@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/boost/!svn/ver/57747/tags/release/Boost_1_41_0/boost/fusion/adapted/std_pair
+END
+std_pair_iterator.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/boost/!svn/ver/57747/tags/release/Boost_1_41_0/boost/fusion/adapted/std_pair/std_pair_iterator.hpp
+END
+tag_of.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/boost/!svn/ver/57747/tags/release/Boost_1_41_0/boost/fusion/adapted/std_pair/tag_of.hpp
+END
