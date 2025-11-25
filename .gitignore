@@ -1,0 +1,21 @@
+install
+
+# Build artifacts
+*.o
+*.lo
+*.la
+.*/
+Makefile
+config.h
+config.log
+config.status
+libtool
+rave-impl.pc
+rave.pc
+rave.spec
+RaveConfig.cmake
+stamp-h1
+kinematics*
+memorytests
+propagatortests
+rave_version
