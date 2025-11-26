@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Check for argument
 if [ -z "$1" ]; then
@@ -29,12 +30,15 @@ current_dir=$PWD
 # Build CLHEP
 echo "Start building CLHEP..."
 cd ${current_dir}/clhep-2.0.4.4
+export CXXFLAGS="-std=c++03 -g -O2"
 ./configure --prefix=${install_dir}
-make -j4 && make install
+make -j4
+make install
 
 # Build RAVE
 echo "Start building Rave..."
 cd ${current_dir}/rave-0.6.9
 export CXXFLAGS="-std=c++03 -g -O2"
 ./configure --with-clhep=${install_dir} --with-clhep_vector-libpath=${install_dir}/lib --with-clhep_matrix-libpath=${install_dir}/lib --prefix=${install_dir} --disable-java
-make -j4 && make install
+make -j4
+make install
