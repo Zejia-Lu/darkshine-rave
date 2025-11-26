@@ -6,6 +6,7 @@ This is the rave package along with the clhep package that is needed for the Dar
 ```
 # Use gcc version < 5
 ./build-clhep.sh /path/to/install
+
 # Switch to gcc version >= 5
 ./build-rave.sh /path/to/install
 ```
