@@ -8,37 +8,35 @@ if [ -z "$1" ]; then
 fi
 
 # Check gcc version
-gcc_version=$(gcc -dumpversion | cut -d. -f1)
+gcc_major=$(gcc -dumpversion | cut -d. -f1)
 
-if ! [[ "$gcc_version" =~ ^[0-9]+$ ]]; then
+if ! [[ "$gcc_major" =~ ^[0-9]+$ ]]; then
     echo "Error: Unable to detect GCC version."
     exit 1
 fi
 
-if [ "$gcc_version" -lt 5 ]; then
-    echo "Error: GCC version $gcc_version detected, but >= 5 is required."
+if [ "$gcc_major" -lt 5 ]; then
+    echo "Error: GCC version $gcc_major detected, but >= 5 is required for Rave."
     exit 1
 fi
 
-echo "GCC version check passed. Current version: $gcc_version"
+echo "GCC version check passed for Rave. Current version: $gcc_major"
 
 #########################################
 
 install_dir=$1
 current_dir=$PWD
 
-# Build CLHEP
-echo "Start building CLHEP..."
-cd ${current_dir}/clhep-2.0.4.4
-export CXXFLAGS="-std=c++03 -g -O2"
-./configure --prefix=${install_dir}
-make -j4
-make install
+# Ensure CLHEP is available
+if [ ! -d "${install_dir}/include/CLHEP" ] || [ ! -d "${install_dir}/lib" ]; then
+    echo "Error: CLHEP installation not found in ${install_dir}. Please run build-clhep.sh first."
+    exit 1
+fi
 
 # Build RAVE
 echo "Start building Rave..."
-cd ${current_dir}/rave-0.6.9
+cd "${current_dir}/rave-0.6.9"
 export CXXFLAGS="-std=c++03 -g -O2"
-./configure --with-clhep=${install_dir} --with-clhep_vector-libpath=${install_dir}/lib --with-clhep_matrix-libpath=${install_dir}/lib --prefix=${install_dir} --disable-java
+./configure --with-clhep="${install_dir}" --with-clhep_vector-libpath="${install_dir}/lib" --with-clhep_matrix-libpath="${install_dir}/lib" --prefix="${install_dir}" --disable-java
 make -j4
 make install
